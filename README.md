@@ -1,65 +1,198 @@
-```markdown
-# Real-Time API Data Integration & Analytics Dashboard
+# 🌍 Real-Time API Data Integration & Analytics Dashboard
 
-An end-to-end Data Engineering and Analytics project that extracts live global socioeconomic datasets from the World Bank REST API, processes and flattens nested JSON payloads using Python, stores feature-engineered historical records, and powers an interactive multi-page Executive Dashboard in Power BI.
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![REST API](https://img.shields.io/badge/REST%20API-World%20Bank-blue)](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+An end-to-end **Data Engineering and Business Intelligence** project that extracts live global socioeconomic data from the **World Bank REST API**, transforms nested JSON into analytics-ready datasets using Python, performs feature engineering, and delivers an interactive multi-page **Power BI Executive Dashboard** for data-driven decision making.
 
 ---
 
-## 📊 Project Architecture
+# 📌 Project Highlights
+
+- Built an automated ETL pipeline using Python and REST APIs.
+- Processed and flattened nested JSON responses into structured datasets.
+- Engineered GDP per Capita and GDP Growth analytical features.
+- Designed an interactive Power BI dashboard with multiple report pages.
+- Implemented DAX measures, KPI cards, maps, trend analysis, and data quality monitoring.
+- Created reusable, scalable workflows for future API integrations.
+
+---
+
+# 🏗️ Solution Architecture
 
 ```text
-[World Bank REST API]
-       │
-       ▼ (HTTP GET / Requests)
-[data/raw/ (JSON Payloads)]
-       │
-       ▼ (Python Cleaning & Flattening / Pandas)
-[data/processed/ & data/historical/ (Master CSVs)]
-       │
-       ▼ (Power Query & DAX Modeling)
-[Power BI Executive Dashboard (.pbix)]
-
+                     World Bank REST API
+                             │
+                  HTTP GET Requests (requests)
+                             │
+                             ▼
+                   Raw JSON Data Collection
+                             │
+                             ▼
+         Python ETL Pipeline (Pandas + NumPy)
+    Cleaning • Flattening • Validation • Transformation
+                             │
+                             ▼
+             Processed & Historical CSV Files
+                             │
+                             ▼
+          Power Query Data Transformation
+                             │
+                             ▼
+               Power BI Data Modeling (DAX)
+                             │
+                             ▼
+           Interactive Executive Dashboard
 ```
 
 ---
 
-## 🚀 Key Features
+# 🚀 Key Features
 
-• **Automated API Ingestion:** Python script utilizing the `requests` library with pagination handling to pull live multi-indicator datasets across global economies.
+### 🔹 Automated API Data Ingestion
 
-
-
-
-• **Data Cleaning & Transformation:** Flattens nested JSON structures, standardizes data types, handles missing values, and pivots indicators into a clean wide-format tabular structure.
-
-
-
-
-• **Advanced Feature Engineering:** Computes GDP per Capita and Year-over-Year percentage growth rates using Pandas.
-
-
-
-
-• **End-to-End Orchestration:** Master pipeline script (`run_pipeline.py`) automating extraction and transformation workflows.
-
-
-
-
-• **Executive BI Reporting:** Multi-page Power BI dashboard featuring dynamic KPIs, trend lines, geographic maps, and advanced DAX measures.
+- Extracts live socioeconomic indicators using the World Bank REST API.
+- Supports API pagination for large datasets.
+- Stores raw JSON responses for reproducibility.
+- Creates structured historical datasets.
 
 ---
 
-## 🛠️ Tech Stack
+### 🔹 Data Cleaning & Transformation
 
-* **Programming & ETL:** Python, Requests, Pandas, NumPy, Jupyter Notebook
-* **API & Data Formats:** REST APIs, JSON, CSV
-* **Data Visualization & BI:** Power BI, Power Query, DAX
-* **Version Control:** Git, GitHub
-* **Environment:** VS Code
+- Parses nested JSON objects.
+- Handles missing values.
+- Standardizes column names and data types.
+- Removes duplicate records.
+- Generates analytics-ready tabular datasets.
 
 ---
 
-## 📁 Project Structure
+### 🔹 Feature Engineering
+
+Derived business metrics include:
+
+- GDP per Capita
+- GDP Annual Growth Rate
+- Inflation Rate
+- Population Trends
+- Historical Economic Indicators
+
+---
+
+### 🔹 Interactive Power BI Dashboard
+
+Includes:
+
+- Executive Dashboard
+- Country Analysis
+- Trend Analysis
+- Data Quality Dashboard
+
+---
+
+# 📊 Dashboard Preview
+
+## 🌍 Executive Dashboard
+
+Provides a high-level overview of global economic performance with KPI cards, interactive filters, GDP trends, and country comparisons.
+
+![Executive Dashboard](images/executive_dashboard.png)
+
+---
+
+## 🌎 Country Analysis
+
+Analyze country-level economic indicators using interactive tables and geographic visualizations.
+
+![Country Analysis](images/country_analysis.png)
+
+---
+
+## 📈 Trend Analysis
+
+Visualize historical GDP growth, inflation trends, and relationships between key economic indicators.
+
+![Trend Analysis](images/trend_analysis.png)
+
+---
+
+## ✅ Data Quality Dashboard
+
+Monitor dataset quality through record counts, missing values, refresh timestamps, and pipeline validation metrics.
+
+![Data Quality Dashboard](images/data_quality_dashboard.png)
+
+---
+
+# 📈 Dashboard Capabilities
+
+### Executive Dashboard
+
+- Total GDP
+- Average GDP per Capita
+- Average Inflation Rate
+- Average GDP Growth
+- Interactive KPI Cards
+- GDP Trend Analysis
+
+### Country Analysis
+
+- Country-wise Economic Indicators
+- Interactive Geographic Map
+- GDP Comparison
+- Population Analysis
+
+### Trend Analysis
+
+- GDP Growth vs Inflation
+- GDP per Capita vs Life Expectancy
+- Historical Trend Visualization
+
+### Data Quality Dashboard
+
+- Total Record Count
+- Missing Value Analysis
+- Data Validation Metrics
+- Refresh Timestamp Monitoring
+
+---
+
+# 🛠 Technology Stack
+
+## Programming
+
+- Python
+- Pandas
+- NumPy
+- Requests
+
+## Data Engineering
+
+- REST API
+- JSON
+- CSV
+- ETL Pipeline
+
+## Business Intelligence
+
+- Power BI
+- Power Query
+- DAX
+
+## Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- Jupyter Notebook
+
+---
+
+# 📂 Project Structure
 
 ```text
 RealTime_API_Dashboard/
@@ -68,6 +201,12 @@ RealTime_API_Dashboard/
 │   ├── raw/
 │   ├── processed/
 │   └── historical/
+│
+├── images/
+│   ├── executive_dashboard.png
+│   ├── country_analysis.png
+│   ├── trend_analysis.png
+│   └── data_quality_dashboard.png
 │
 ├── notebooks/
 │   ├── 01_API_Testing.ipynb
@@ -83,40 +222,144 @@ RealTime_API_Dashboard/
 │   └── RealTimeDashboard.pbix
 │
 ├── reports/
+│
 ├── requirements.txt
+│
 └── README.md
-
 ```
 
 ---
 
-## ⚙️ Installation & Usage Guide
+# 🌐 Dataset Source
 
-1. **Clone the Repository:**
+**World Bank Open Data API**
+
+https://api.worldbank.org/
+
+Economic indicators include:
+
+- GDP
+- GDP Growth
+- GDP per Capita
+- Inflation
+- Population
+- Life Expectancy
+- Unemployment
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
 ```bash
-git clone [https://github.com/samikshahujare/RealTime_API_Dashboard.git](https://github.com/samikshahujare/RealTime_API_Dashboard.git)
-cd RealTime_API_Dashboard
-
+git clone https://github.com/samikshahujare/RealTime_API_Dashboard.git
 ```
 
+```bash
+cd RealTime_API_Dashboard
+```
 
-2. **Install Dependencies:**
+---
+
+## Install Dependencies
+
 ```bash
 pip install -r requirements.txt
-
 ```
 
+---
 
-3. **Run the Automated Pipeline:**
+## Execute Complete ETL Pipeline
+
 ```bash
 python scripts/run_pipeline.py
-
 ```
 
+---
 
-4. **Open the Power BI Dashboard:**
-Open `powerbi/RealTimeDashboard.pbix` in Power BI Desktop to explore the interactive visual reports.
+## Launch Power BI Dashboard
 
+Open
+
+```text
+powerbi/RealTimeDashboard.pbix
 ```
 
-```
+using **Power BI Desktop**.
+
+---
+
+# 📚 Python Libraries
+
+| Library | Purpose |
+|----------|----------|
+| Requests | REST API Integration |
+| Pandas | Data Cleaning & Transformation |
+| NumPy | Numerical Computing |
+| JSON | API Response Parsing |
+
+---
+
+# 📊 Power BI Skills Demonstrated
+
+- Power Query
+- Data Modeling
+- DAX Measures
+- KPI Cards
+- Interactive Slicers
+- Maps
+- Scatter Charts
+- Line Charts
+- Bar Charts
+- Executive Dashboards
+- Data Quality Monitoring
+
+---
+
+# 💼 Data Engineering Skills Demonstrated
+
+- REST API Integration
+- ETL Pipeline Development
+- Data Cleaning
+- Feature Engineering
+- Historical Data Storage
+- JSON Processing
+- Data Validation
+- Automated Data Workflows
+
+---
+
+# 🎯 Business Value
+
+This solution demonstrates how live API data can be transformed into reliable business intelligence through automated ETL pipelines and interactive dashboards, enabling data-driven decision-making using real-time socioeconomic indicators.
+
+---
+
+# 🔮 Future Enhancements
+
+- SQL Database Integration
+- Incremental Data Loading
+- Azure Data Factory Pipeline
+- Scheduled Power BI Refresh
+- Docker Containerization
+- CI/CD Deployment using GitHub Actions
+- Cloud Data Warehouse Integration
+
+---
+
+# 👩‍💻 Author
+
+**Samiksha Hujare**
+
+**GitHub**
+
+https://github.com/samikshahujare
+
+**LinkedIn**
+
+https://www.linkedin.com/in/samiksha-hujare
+
+---
+
+## ⭐ If you found this project helpful, consider giving it a star!
