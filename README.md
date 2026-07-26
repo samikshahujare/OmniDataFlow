@@ -100,7 +100,7 @@ Includes:
 
 Provides a high-level overview of global economic performance with KPI cards, interactive filters, GDP trends, and country comparisons.
 
-![Executive Dashboard](images/Executive_Dashboard.png)
+![Executive Dashboard](images/Executive%20Dashboard.png)
 
 ---
 
@@ -108,7 +108,7 @@ Provides a high-level overview of global economic performance with KPI cards, in
 
 Analyze country-level economic indicators using interactive tables and geographic visualizations.
 
-![Country Analysis](images/Country_Analysis.png)
+![Country Analysis](images/Country%20Analysis.png)
 
 ---
 
@@ -116,7 +116,7 @@ Analyze country-level economic indicators using interactive tables and geographi
 
 Visualize historical GDP growth, inflation trends, and relationships between key economic indicators.
 
-![Trend Analysis](images/Trend_Analysis.png)
+![Trend Analysis](images/Trend%20Analysis.png)
 
 ---
 
@@ -124,7 +124,7 @@ Visualize historical GDP growth, inflation trends, and relationships between key
 
 Monitor dataset quality through record counts, missing values, refresh timestamps, and pipeline validation metrics.
 
-![Data Quality Dashboard](images/Data_Quality_Dashboard.png)
+![Data Quality Dashboard](images/Data%20Quality%20Dashboard.png)
 
 ---
 
