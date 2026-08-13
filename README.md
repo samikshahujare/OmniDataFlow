@@ -1,10 +1,10 @@
-# 🌍 Real-Time API Data Integration & Analytics Dashboard
+# OmniDataFlow
+> End-to-End API Integration Engine, Automated Python ETL & Power BI Executive Reporting Suite
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
-[![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![REST API](https://img.shields.io/badge/REST%20API-World%20Bank-blue)](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![ETL Pipeline](https://img.shields.io/badge/ETL-Automated_Pipeline-orange.svg)]()
+[![Power BI](https://img.shields.io/badge/Power_BI-Executive_Dashboard-yellow.svg)]()
+[![REST API](https://img.shields.io/badge/API-World_Bank_REST-green.svg)]()
 
 An end-to-end **Data Engineering and Business Intelligence** project that extracts live global socioeconomic data from the **World Bank REST API**, transforms nested JSON into analytics-ready datasets using Python, performs feature engineering, and delivers an interactive multi-page **Power BI Executive Dashboard** for data-driven decision making.
 
